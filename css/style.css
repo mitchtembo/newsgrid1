@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size: 16px;
+    --clr-primary: #c72727;
+    --clr-secondary: orange;
+    --max-width: 1100px;
+    --clr-background: #f3f3f3;
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+    --bg__primary:#c72727;
+}
+
+/* utilities */
+
+.current{
+    background: var(--clr-primary);}
+.card {
+    background: white;
+    padding: 1em;
+}
+.bg__dark {
+    background: #000000bf;
+    color: #fff;
+}
+.btn-block {width:100%;
+text-align: center;}
+img {
+    max-width: 100%;
+}
+
+.bg__primary {
+    background: var(--clr-primary);
+    color: #fff;
+}
+.bg__secondary{
+    background: var(--clr-secondary);
+    color: #fff;
+}
+
+/* margins */
+.mb-1{margin: .8em 0;}
+.mb-2{margin: 2em 0;}
+.mb-3{margin: 3em 0;}
+.mb-4{margin: 4em 0;}
+
+.py-2 {padding: 2em 0;}
+.py-3 {padding: 3em 0;}
+.py-4 {padding: 4em 0;}
+.py-5 {padding: 5em 0;}
+.category {
+    color: #fff;
+    display: inline-block;
+    padding: .3em .2em;
+    margin-bottom: .9em;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: .55rem;
+    
+}
+
+.category__sports {
+    background: var(--sports-color);
+}
+
+.category__ent {
+    background: var(--ent-color);
+}
+
+.category__tech {
+    background: var(--tech-color);
+}
+
+/* ============================== */ 
+body {
+    font-family: 'Open Sans', sans-serif;
+ font-size: var(--font-size);
+ background-color: var(--clr-background);
+ overflow-x: hidden;
+ line-height: 1.4;
+}
+
+.container {
+    max-width: var(--max-width);
+ margin: 0 auto;
+}
+.logo {
+ text-align: center;
+}
+.logo img{
+max-width: 100%;
+height: 2em;
+margin: auto;
+}
+
+/* header */
+.top__header {
+    width: 100vw;
+    margin: 1.2em 0 0;
+    /* overflow: auto; */
+    position: sticky;
+ top: 0;
+ z-index: 3;
+}
+
+header.top__header {
+    background: #f3f3f3;
+}
+
+.socials {
+    display: flex;
+ align-items: center;
+}
+
+.socials li {
+ list-style: none;
+ padding: 0 .2em;
+}
+
+.page__links {
+ display: flex;
+ align-items: center;
+}
+
+.page__links li {
+ list-style: none;
+ padding: 0;
+}
+.page__links a {
+ text-decoration: none;
+}
+
+/* PAGE__LINKS BACKGROUNDS */
+.page__links a {
+ display: inline-block;
+ color: #444;
+ font-weight: 800;
+ padding:.5em 1em ;
+}
+.bg__primary{
+ background-color: var(--clr-primary);
+ color: #fff;
+}
+
+.page__links a:hover {
+    background-color: #ccc;
+    
+}
+
+.top__nav {
+ display: flex;
+ justify-content: space-between;
+}
+
+
+ul.socials + ul.page__links {
+    
+    margin-left: -30em;
+}
+
+/* social links */
+
+ul.socials li a {
+    color: #444;
+    font-size: 2em;
+}
+
+
+/* showcase */
+
+main.showcase {
+width: 100vw;
+height: 50vh;
+position: relative;
+margin-top: 1em;
+/* overflow: auto; */
+background: #444;
+}
+
+main.showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/featured.jpg') no-repeat center center/cover;
+    opacity: .3
+    
+}
+
+
+.headline__wrapper .content {
+    z-index: 1;
+}
+
+
+
+.headline__wrapper {
+ padding: 2em;
+ display: grid;
+ grid-template-columns: 1fr 1fr; 
+ color: #fff;
+ align-items: center;
+ justify-content: center;
+} 
+.content .btn ,
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: #333;
+    padding: .7em 1em;
+    border-radius: 6px;
+    margin-top: 1.2em;
+    text-decoration: none;
+    
+}
+
+h3.editor_picks {
+    text-transform:uppercase;
+ font-weight: bold;
+ margin-top: -.3em;
+}
+
+
+.articles__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+/* grid with-in-a-grid */
+.articles__container > *:first-child ,
+.articles__container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / span 2 ;
+    grid-gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.articles__container > *:last-child {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / span 2;
+}
+
+/* About Page */
+
+
+.about__main .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+}
+.about__title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.about__main p {
+    padding-bottom: 0.756em;
+}
+
+.about__section {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.side__bar {
+    padding: 1em;
+    color: #fff;
+    border-radius: 5px;
+}
+.side__bar .cta h3 {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-bottom: 1rem;
+}
+
+/* articles */
+
+.article__author{
+    background: #ccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.article__author > *:first-child {
+    grid-column: 1 / span 2;
+}
+
+.article .category {
+    display: inline-block;
+    margin-left: auto;
+
+}
+
+
+
+aside.card i {
+    display: block;
+    padding: 1.3rem 0;
+    width: 80%;
+    border-bottom: 1px dotted #555;
+}
+aside.card i:hover {
+    color: var(--clr-primary);
+}
+    
+
+
+
+
+
+
+/* footer */
+
+.footer__cols {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.7em;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer__cols li {
+    list-style: none;
+}
+
+.footer__cols ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__cols ul li a:hover {
+    color: var(--clr-primary);
+}
+
+.footer__cols ul li {
+    list-style: none;
+    padding: 0 0 1.4em 0;
+    position: relative
+}
+
+.footer__cols ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.7em;
+    height: .1px;
+    width: 100%;
+    background: transparent;
+    border-bottom: .2px dotted #555;
+    /* the easy solution here was not do this but rather just use border-bottom and a padding . But well done for trying!!!*/
+}
+
+
+.footer__cols .about img {
+    max-width: 100%;
+    height: 2em;
+}
+
+.footer__cols .col {
+    /* border: 1px solid red; */
+    height: 100%;
+}
+
+.footer__cols h4 {
+    color: #FFF;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+
+.footer__cols .info p {
+    padding-bottom: .4em;
+}
+
+.footer__cols .info label , 
+.footer__cols .info input {
+    display: block;
+}
+
+.footer__cols .info input {
+    width: 100%;
+    height: 2.5em;
+    padding: 0 0 0 .2em;
+    margin-bottom: .7em;
+    border-radius: 0.2em;
+    outline: none;
+    border: none;
+}
+
+.footer__cols .info .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: .5em 0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: .5;
+}
+
+.footer__cols .join__us .btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    padding: .5em 2em;
+    margin-top: 1em;
+}
+
+.footer__cols .copy {
+
+    grid-column: 1 / span 4;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+    /* height: 4em; */
+    background: #444;
+    padding: .5em;
+}
+
+.footer__cols .copy p {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    margin: .5em 0;
+}
